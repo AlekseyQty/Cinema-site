@@ -1,0 +1,31 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'cinema/style2.css' %}" />
+
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="initial-scale=1"> 
+<title>Cinema</title> 
+<link href="https://fonts.googleapis.com/css?family=Rajdhani"> 
+</head> 
+<body> 
+<header> 
+<ul class="headerlist"> 
+<li><a href="#">Sessions</a></li> 
+<li><a href="{%url 'cinema:index' %}">Films</a></li> 
+<li><a href="#">Account</a></li> 
+<li><a href="#">News</a></li> 
+</ul> 
+</header> 
+<section>
+{% block content %}
+{% endblock %}	
+</section> 
+<footer> 
+<ul> 
+<li><a href="#">Logout</a></li> 
+</ul> 
+</footer> 
+</body> 
+</html>

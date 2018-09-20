@@ -1,0 +1,23 @@
+{%extends 'cinema/base.html' %}
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'cinema/style2.css' %}" />
+
+
+{%block content %}
+<div class = "films">
+{% if latest_film_list %}
+    
+    {% for film in latest_film_list %}
+    	<p><a href="{%url 'cinema:session' film.id %}">{{ film.film_name }}</a></p>
+    {% endfor %}
+
+{% else %}
+    <p>No films are available.</p>
+{% endif %}
+</div>
+{%endblock content %}
+
+
+
+

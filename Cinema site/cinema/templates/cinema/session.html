@@ -1,0 +1,20 @@
+{%extends 'cinema/base.html' %}
+
+{% load static %}
+
+{%block content %}
+<div class="films">
+<form action="/cinema/checkout/{{ticket_session_id}}" method="post">
+	{% csrf_token %}
+		{% if session_list %}
+		    
+		    {% for session in session_list %}
+		    	<p><a href="{%url 'cinema:detail' session.film_name_id session.id %}">{{ session.session_name }}</a></p>    
+		    {% endfor %}
+
+		{% else %}
+		    <p>No sessions are available.</p>
+		{% endif %}
+</form>
+</div>
+{%endblock content %}

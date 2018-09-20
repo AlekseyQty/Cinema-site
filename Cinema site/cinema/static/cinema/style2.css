@@ -1,0 +1,144 @@
+* {
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #2d3133 50%, #0f1215);
+  width: 100vw;
+}
+
+header,
+section,
+footer {
+  width: 60%;
+  margin: 20px auto;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+header {
+  background-color: #3590cd;
+}
+
+section {
+  background-color: #31a657;
+}
+
+footer {
+  background-color: #d32c45;
+}
+
+header,
+footer {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  padding: 20px 0;
+  font-family: Arial, sans-serif;
+  transition: background-color, .95s, color .95s;
+}
+
+ footer li{
+	 width: 100%;
+ }
+ 
+ header li{
+	 width: 24.55%;
+ }
+
+a:hover {
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+section {
+  min-height: 200px;
+  height: 500px;
+  height: calc(100vh - 220px);
+  top: 0;
+  left: 0;
+  overflow: auto;
+}
+
+section .films{
+  font-size: 250%;
+  width: 80%;
+  margin: 0 auto; 
+  padding-top: 3%;
+  text-align: center;
+}
+
+table{
+    border-spacing: 7px 11px;
+}
+
+.checkenable {
+  background-color: #ffffff;
+  padding: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+.checkdisable {
+  background-color: grey;
+  padding: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+.seats{
+  margin: 0 auto;
+  display: inline-block;
+}
+
+input[type="checkbox"]{
+  opacity: 1;
+}
+
+input[type="submit"]{
+  padding: 7px;
+  width: 15%;
+  border-radius: 5px;
+  background-color: #ffffff;
+  font-weight: 500;
+  font-size: 16;
+  font-family: Arial, sans-serif;
+  transition: background-color, .20s, color .20s;
+}
+
+input[type="submit"]:hover{
+  background-color: #3590cd;
+  color: #ffffff;
+  outline: none;
+  border: none;
+}
+
+.tickets {
+  padding-top:  20%;
+  font-size: 25;
+  color: white;
+}
+
+.end {
+  padding-top:  20%;
+  font-size: 32;
+  color: white;
+}
+
+.end a {
+  width: 30%;
+  margin: 0 auto;
+}

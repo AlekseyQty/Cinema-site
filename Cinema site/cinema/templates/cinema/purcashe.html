@@ -1,0 +1,21 @@
+{%extends 'cinema/base.html' %}
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'cinema/style2.css' %}" />
+
+
+{%block content %}
+<div class="tickets">
+<form action="/cinema/checkout/{{session_id}}/success" method="post">
+	{% csrf_token %}
+	{%if seat_list %}
+		<p align="center"> You want to buy ticket's: </p>
+		{% for s in seat_list %}
+			<p align="center"> Seat {{s.ticket_row}} row {{s.ticket_col}} </p>
+		{% endfor %}
+		<p align="center"> For total price {{total_price}} </p>
+		<p align="center"><input type="submit" value="Confirm"></p>
+	{% endif %}
+</form>
+</div>
+{%endblock content %}
